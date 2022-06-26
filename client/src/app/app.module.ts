@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TocComponent } from './pages/toc/toc.component';
 import { ObjectListPipe } from './pipes/object-list.pipe';
 import { LoginComponent } from './pages/login/login.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { LoginComponent } from './pages/login/login.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    StoreModule.forRoot({}, {}),
   ],
   providers: [],
   bootstrap: [AppComponent]
