@@ -10,6 +10,16 @@ interface User{
   providedIn: 'root'
 })
 export class StoreService {
-private looggedInUser = new BehaviorSubject<User | null>(null);
+public loggedInUser$ = new BehaviorSubject<User | null>(null);
+public pokemon$ = new BehaviorSubject<any[]>([]);
   constructor() { }
+  setLoggedInUser(user: User){
+    this.loggedInUser$.next(user);
+  }
+  logout() {
+    this.loggedInUser$.next(null)
+  }
+  setPokemon(pokemon: any[]) {
+    this.pokemon$.next(pokemon);
+  }
 }

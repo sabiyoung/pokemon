@@ -12,4 +12,7 @@ baseUrl= 'https://pokeapi.co/api/v2/';
   getContents() {
     return this.http.get(this.baseUrl+'');
   }
+  get(url:string){
+return this.http.get(this.baseUrl + url)
+  }
 }
